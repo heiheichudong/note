@@ -40,3 +40,9 @@ Other
 2.配置名字和邮箱：-- global 全局的设置
 git config --global user.name "zl"
 git config --global user.email "wlbz2014@163.com"
+
+2、git仓库的创建：
+mkdir <filename> 	//创建文件夹
+cd <filename> 		//切换到文件夹
+pwd			//查看当前文件夹
+git init		//初始化git
