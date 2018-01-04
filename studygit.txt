@@ -1,5 +1,0 @@
-Git is a distributed version control system.
-Git is free software distributed under the GPL.
-加一行
-再加一行
-在再加一行
