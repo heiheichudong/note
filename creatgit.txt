@@ -61,3 +61,12 @@ git checkout 分支名字 		//切换到分支
 git branch 			//查看分支
 git merge 分支名字		//合并到当前分支
 git branch -d dev		//删除分支
+git log --graph --pretty=oneline --abbrev-commit //用带参数的git log也可以看到分支的合并情况：
+合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
+git branch -D <name> 强行删除
+
+5、保存现场
+git stash		//保存当前的状态
+git stash apply		//恢复保存的状态
+git stash drop		//删除保存的状态
+git stash pop		//恢复和删除保存的状态
