@@ -65,6 +65,8 @@ git branch -d dev		//删除分支
 git log --graph --pretty=oneline --abbrev-commit //用带参数的git log也可以看到分支的合并情况：
 合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
 git branch -D <name> 强行删除
+git push --set-upstream origin 分支名		//推送本地分支到远程仓库
+git checkout -b 本地分支名 origin/远程分支名		//将远程git仓库里的指定分支拉取到本地（本地不存在的分支）
 
 5、保存现场
 git stash		//保存当前的状态
