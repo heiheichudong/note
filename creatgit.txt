@@ -67,6 +67,7 @@ git log --graph --pretty=oneline --abbrev-commit //用带参数的git log也可�
 git branch -D <name> 强行删除
 git push --set-upstream origin 分支名		//推送本地分支到远程仓库
 git checkout -b 本地分支名 origin/远程分支名		//将远程git仓库里的指定分支拉取到本地（本地不存在的分支）
+拉取不成功 我们先执行 git fetch
 
 5、保存现场
 git stash		//保存当前的状态
