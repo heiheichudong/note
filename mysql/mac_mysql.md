@@ -1,0 +1,1 @@
+[mac安装mysql](https://www.jianshu.com/p/07a9826898c0)
