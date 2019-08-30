@@ -29,7 +29,7 @@ public static int[] getImageWidthHeight(String path){
 }
 ```
 
-addView()
+[新增view（addView()）后，之前的控件位置被重置](https://www.jianshu.com/p/c73bd8e30ffa)
 在拖拽view1的时候，要重新对view1的布局参数进行设置，如下
 ```
 RelativeLayout.LayoutParams layoutParams = (LayoutParams) view1.getLayoutParams();
@@ -37,6 +37,26 @@ RelativeLayout.LayoutParams layoutParams = (LayoutParams) view1.getLayoutParams(
   layoutParams.topMargin = view1.getTop();
   view1.setLayoutParams(layoutParams);
 ```
+
+[各种坐标](https://blog.csdn.net/afei__/article/details/51674519)
+- View获取坐标的方法有：  
+  getTop：获取到的，是view自身的顶边到其父布局顶边的距离  
+  getLeft：获取到的，是view自身的左边到其父布局左边的距离  
+  getRight：获取到的，是view自身的右边到其父布局左边的距离  
+  getBottom：获取到的，是view自身的底边到其父布局顶边的距离  
+
+- MotionEvent获取坐标的方法有：  
+  getX()：获取点击事件相对控件左边的x轴坐标，即点击事件距离控件左边的距离  
+  getY()：获取点击事件相对控件顶边的y轴坐标，即点击事件距离控件顶边的距离  
+  getRawX()：获取点击事件相对整个屏幕左边的x轴坐标，即点击事件距离整个屏幕左边的距离  
+  getRawY()：获取点击事件相对整个屏幕顶边的y轴坐标，即点击事件距离整个屏幕顶边的距离  
 ![view坐标](view_coord.png) 
 
+> 真实位置的改变  
+```
+    offsetLeftAndRight、offsetTopAndButtom  
+    view.setLeft(left)、view.setRight(right)（属性动画同理）  
+    LayoutParams  
+    ViewDragHelper 
+```
 
