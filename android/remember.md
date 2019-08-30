@@ -37,4 +37,6 @@ RelativeLayout.LayoutParams layoutParams = (LayoutParams) view1.getLayoutParams(
   layoutParams.topMargin = view1.getTop();
   view1.setLayoutParams(layoutParams);
 ```
+![view坐标](view_coord.png) 
+
 
