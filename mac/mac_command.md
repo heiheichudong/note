@@ -10,3 +10,4 @@ touch xxx.txt
 ```
 mkdir 文件夹名称
 ```
+>brew 安装
