@@ -3,7 +3,6 @@
 ##### 本脚本适用环境：  
 系统支持：CentOS，Debian，Ubuntu  
 内存要求：≥128M  
-作者：秋水逸冰
 
 ##### 关于本脚本：  
 一键安装 ShadowsocksR 服务端。  
