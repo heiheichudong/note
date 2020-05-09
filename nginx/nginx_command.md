@@ -6,3 +6,11 @@ find / |grep nginx.conf
 ```
 tail -f xx.log
 ```
+> 查看 nginx 位置
+```
+which nginx
+```
+> 查看 nginx 是否运行
+```
+ps aux|grep nginx
+```
