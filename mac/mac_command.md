@@ -10,4 +10,10 @@ touch xxx.txt
 ```
 mkdir 文件夹名称
 ```
->brew 安装
+> 查看mac IP地址
+```
+curl http://ip.sb
+
+curl ip.me
+```
+> brew 安装
