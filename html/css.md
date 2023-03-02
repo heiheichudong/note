@@ -1,11 +1,37 @@
 # Css
+
 #### 语法：
-> 实体 
-- 如空格 \&nbsp; 大于 \&gt; 小于 \&lt; 等
-> 语义化标签
-- 如 \<form> 、 \<table> 以及 \<img> 等
-> 非语义标签
-- \<div> 和 \<span>
-> 块元素内联元素
-- 块元素：独占一行 
-- 内联元素：不独占一行
+
+> 位置
+
+- 内联样式：
+
+```
+<div style="color: fuchsia"></div>
+```
+
+- style标签内：
+
+```
+<style>
+  p{
+  color: blue;
+  }
+  </style>
+```
+
+- 外部：
+
+```
+<link rel="stylesheet" href="cssImport.css">
+```
+> 基本语法
+- 选择器 声明块
+- 元素选择器 p{} h1{} div{}等
+- id选择器 #id{}
+- class选择器 .class{}
+- 复合选择器 
+  - 交集选择器 div.class
+  - 并集选择器 div,span,class,class,....
+- 关系选择器
+  - 父子
