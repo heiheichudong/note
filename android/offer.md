@@ -68,7 +68,11 @@
 + 把对象转换字节流储存
 + transient修饰字段不被序列化
 + static修饰字段不被序列化
-+ [参看](https://blog.csdn.net/qq_44543508/article/details/103232007)
++ [参考](https://blog.csdn.net/qq_44543508/article/details/103232007)
+> hash
++ 一般翻译为散列，音译“哈希”。把任意输入通过散列算法变换成固定长度的输出，该输出就是散列值。
++ 哈希会发生碰撞即两个不同的输入值，根据同一散列函数计算出的散列值相同的现象叫做碰撞
++ [参考](https://blog.csdn.net/majinggogogo/article/details/80260400)
 > MVC MVP MVVM
 + 为了view与model的解耦
 + mvc 
