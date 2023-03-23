@@ -29,7 +29,8 @@
 + [参考](https://zhuanlan.zhihu.com/p/529280783)
 > gc
 + GC 是垃圾回收器的简称，全称是Garbage Collection。
-+ gcroot 可达性
++ gcroot 
++ 可达性
 > 四大引用
 + 强引用 > 软引用 > 软引用 > 虚引用
 + 强引用：强引用是最普遍的引用，一般把一个对象赋给一个引用变量，这个引用变量就是强引用。Object obj = new Object();
@@ -102,12 +103,16 @@
 + 启动方式
   + standard 默认启动
   + singleTop 在栈顶则不需要重新创建
-  + singleTask 将task内的对应Activity实例之上的所有Activity弹出栈
+  + singleTask 将task内的对应Activity实例之上的所有Activity弹出栈，每个栈中只有一个实例
   + singleInstance 新建栈创建activity
++ [参考](https://blog.csdn.net/nihaomabmt/article/details/86490090)
 > Service
 + startService启动
 + bindService启动
 + [参考](https://blog.csdn.net/amin_hui/article/details/123406301)
 > RecycleView
 + [参考](https://www.cnblogs.com/jimuzz/p/14040674.html#:~:text=%E5%86%8D%E4%B9%9F%E4%B8%8D%E7%94%A8%E6%8B%85%E5%BF%83%E9%97%AERecycleView%E4%BA%86%E2%80%94%E2%80%94%E9%9D%A2%E8%AF%95%E7%9C%9F%E9%A2%98%E8%AF%A6%E8%A7%A3%201%20%E8%AE%B2%E4%B8%80%E4%B8%8B%20RecyclerView%20%E7%9A%84%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6%2C%E6%BB%91%E5%8A%A810%E4%B8%AA%EF%BC%8C%E5%86%8D%E6%BB%91%E5%9B%9E%E5%8E%BB%EF%BC%8C%E4%BC%9A%E6%9C%89%E5%87%A0%E4%B8%AA%E6%89%A7%E8%A1%8C%20onBindView%20%E3%80%82%20%E7%BC%93%E5%AD%98%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F,%E5%90%97%2CnotifyItemChange%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0%EF%BC%9F%204%20RecyclerView%20%E5%B5%8C%E5%A5%97%20RecyclerView%20%E6%BB%91%E5%8A%A8%E5%86%B2%E7%AA%81%EF%BC%8CNestScrollView%E5%B5%8C%E5%A5%97RecyclerView%E3%80%82%205%20%E8%AF%B4%E8%AF%B4RecyclerView%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E3%80%82)
-
+> view绘制
++ [参考](https://juejin.cn/post/6844904042175397902)
+> 事件分发
++ [参考](https://zhuanlan.zhihu.com/p/144480486)
