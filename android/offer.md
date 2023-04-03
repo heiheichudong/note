@@ -94,8 +94,8 @@
 ##Android
 > activity
 + [生命周期](./image/activty.jpg)
-+ 第一次启动：onCreate->onStart->onResume；
-+ 打开新的Activity或者返回桌面：onPause->onStop。如果打开新的Activity为透明主题，则不会调用onStop；
++ 第一次启动：onCreate->onStart->onResume;
++ 打开新的Activity或者返回桌面：onPause->onStop。如果打开新的Activity为透明主题，则不会调用onStop;
 + 当回到原来Activity时：onRestart->onStart->onResume;
 + 当按下返回键：onPause->onStop->onDestroy
 + 横竖屏切换：onPause->onStop->onSaveInstanceState->onDestroy->onCreate->onStart->onRestoreInstanceState->onResume
@@ -103,8 +103,15 @@
 + 启动方式
   + standard 默认启动
   + singleTop 在栈顶则不需要重新创建
-  + singleTask 将task内的对应Activity实例之上的所有Activity弹出栈，每个栈中只有一个实例
-  + singleInstance 新建栈创建activity
+  + singleTask 
+    + 如果在任务栈中若不存在Activity实例则创建实例；否则则通过onNewIntent激活重用，再重用该实例的时候，会将该实例上的其他activity的实例清除
+    + 在对应的任务栈中有且只有一个实例
+    + 当然如果和taskAffinity配合使用，则可以在开启或者复用另外任务栈中来创建或者重用Activity实例
+    + 有该Activity启动的其他Activity默认都在该Activity所在的任务栈中，除非设置了taskAffinity或者将Activity的launchMode设置为singleInstance
+  + singleInstance
+    + 在新的任务栈中开启，并且该新的任务中有且仅有这一个Activity实例，若复用Activity实例时，则通过onNewIntent进行激活。
+    + 有该Activity启动的其他Activity不会在该Activity所在的任务栈中，可以在已有的任务栈中，也可以在新创建的任务中。
+    + 并且该Activity实例是在整个系统中有且仅有一个。
 + [参考](https://blog.csdn.net/nihaomabmt/article/details/86490090)
 > Service
 + startService启动
