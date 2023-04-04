@@ -103,17 +103,22 @@
 + 启动方式
   + standard 默认启动
   + singleTop 在栈顶则不需要重新创建
+    + 使用场景：登录页面、WXPayEntryActivity、WXEntryActivity 、推送通知栏
   + singleTask 
     + 如果在任务栈中若不存在Activity实例则创建实例；否则则通过onNewIntent激活重用，再重用该实例的时候，会将该实例上的其他activity的实例清除
     + 在对应的任务栈中有且只有一个实例
     + 当然如果和taskAffinity配合使用，则可以在开启或者复用另外任务栈中来创建或者重用Activity实例
     + 有该Activity启动的其他Activity默认都在该Activity所在的任务栈中，除非设置了taskAffinity或者将Activity的launchMode设置为singleInstance
+    + 使用场景：程序模块逻辑入口:主页面（Fragment的containerActivity）、WebView页面、扫一扫页面、电商中：购物界面，确认订单界面，付款界面
   + singleInstance
     + 在新的任务栈中开启，并且该新的任务中有且仅有这一个Activity实例，若复用Activity实例时，则通过onNewIntent进行激活。
     + 有该Activity启动的其他Activity不会在该Activity所在的任务栈中，可以在已有的任务栈中，也可以在新创建的任务中。
     + 并且该Activity实例是在整个系统中有且仅有一个。
+    + 使用场景：系统Launcher、锁屏键、来电显示等系统应用
 + [参考](https://blog.csdn.net/nihaomabmt/article/details/86490090)
++ [参考](https://blog.csdn.net/black_bird_cn/article/details/79764794)
 > Service
+- 运行在主线程中，不能做长时间的耗时操作。
 + startService启动
 + bindService启动
 + [参考](https://blog.csdn.net/amin_hui/article/details/123406301)
