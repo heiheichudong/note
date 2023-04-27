@@ -92,6 +92,11 @@
   + viewModel:用于view与model的数据流向的绑定
   + view与model解耦彻底
 ##Android
+> handler 
+- handler最关键的点在于保证looper在一个线程中的唯一性和massage含有handler对象即target=handler
+- looper死循环为什么不会造成线程卡死？
+- 答：looper死循环调用的是MessageQueue.next方法，next方法使用的是epoll的阻塞
+- massage
 > activity
 + [生命周期](./image/activty.jpg)
 + 第一次启动：onCreate->onStart->onResume;
