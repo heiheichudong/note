@@ -90,5 +90,19 @@
     - 默认高度：有内容撑开。
     - 可以通过css设置宽高。
   - 修改元素显示模式 display:block、inline、inline-block;
-  - ![整合](./block_show.jpg)
-  - 
+  - ![整合](image/block_show.jpg)
+- 盒子模型：
+  - content区域 padding border
+  - margin ![margin](image/margin.png)
+  - ![margin塌陷问题](image/margin塌陷问题.jpg)
+  - ![margin合并问题](image/margin合并问题.jpg)
+  - ![溢出问题](image/溢出问题.jpg)
+  - display: none 隐藏不占位   visibility: hidden 隐藏占位
+  - ![继承](image/继承.jpg)
+  - ![剧中布局](image/布局小技巧.jpg)
+  - ![空白问题](image/行内元素空白问题.png)
+  - ![幽灵空白](image/幽灵空白问题.png)
+- 浮动 float
+  - ![float](image/float.png)
+  - ![float问题](image/float问题.png)
+  - ![float解决问题](image/float解决方案.png)
