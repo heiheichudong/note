@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC解决方案</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .outer{
+            width: 600px;
+            background: gray;
+            /*开启浮动*/
+            /*float: left;*/
+            /*开启绝对定位*/
+            /*position: absolute;*/
+            /*开启行内块*/
+            /*display: inline-block;*/
+            /*开启表格*/
+            /*display: table;*/
+            /*开启溢出处理*/
+            /*overflow: hidden;*/
+            /*开启多列*/
+            /*column-count: 1;*/
+            /*开启*/
+            /*display: flow-root;*/
+            /*开启伸缩盒*/
+            display: flex;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+        }
+        .inner1{
+            background: green;
+        }
+        .inner2{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box inner1">
+
+        </div>
+        <div class="box inner2">
+
+        </div>
+    </div>
+</body>
+</html>

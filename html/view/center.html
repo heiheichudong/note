@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>center</title>
+    <link rel="stylesheet" href="../css/normalize.css">
     <style>
         .outer1 {
             width: 400px;
@@ -46,14 +47,14 @@
             vertical-align: middle;
         }
 
-        .outer4{
+        .outer4 {
             width: 400px;
             height: 400px;
             background: #bbffaa;
             position: relative;
         }
 
-        .inner4{
+        .inner4 {
             width: 100px;
             height: 100px;
             position: absolute;
@@ -63,6 +64,21 @@
             bottom: 0;
             margin: auto;
         }
+        .outer5 {
+            width: 400px;
+            height: 400px;
+            background: #bbffaa;
+            display: flex;
+
+            /*align-items: center;
+            justify-content: center;*/
+        }
+
+        .inner5 {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }
 
         .img1 {
             width: 100px;
@@ -70,20 +86,22 @@
             vertical-align: middle;
         }
 
-        .d1{
+        .d1 {
             font-size: 0px;
         }
+
         .s1, .s2, .s3 {
             font-size: 20px;
             background: #bbffaa;
         }
 
-        .d2{
+        .d2 {
             width: 500px;
             background: #bbffaa;
             font-size: 0;
         }
-        .img2{
+
+        .img2 {
             height: 100px;
             /*vertical-align: middle;*/
             /*display: block;*/
@@ -107,6 +125,10 @@
 <hr>
 <div class="outer4">
     <span class="inner4">inner</span>
+</div>
+<hr>
+<div class="outer5">
+    <span class="inner5">inner</span>
 </div>
 <hr>
 <div class="d1">

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <style>
+        html{
+            height: calc(100vh - 90px);
+        }
+        .outer{
+            width: 500px;
+            height: 500px;
+            background: #bbffaa;
+            margin: 0 auto;
+            /*开启flex*/
+            display: flex;
+            /*主轴从左到右 默认*/
+            /*flex-direction: row;*/
+            /*主轴从右往左*/
+            /*flex-direction: row-reverse;*/
+            /*主轴从上到下*/
+            /*flex-direction: column;*/
+            /*主轴从下到上*/
+            /*flex-direction: column-reverse;*/
+
+            /*-------------------------------------*/
+            /*主轴换行 正序*/
+            /*flex-wrap: wrap;*/
+            /*主轴换行 倒序*/
+            /*flex-wrap: wrap-reverse;*/
+
+
+            /*  ----------------方向换行符合属性----------------  */
+            flex-flow: row-reverse wrap-reverse;
+
+            /*  ----------------主轴的对齐方式----------------  */
+            /*主轴末尾对齐*/
+            /*justify-content: flex-end;*/
+            /*主轴开始对齐*/
+            /*justify-content: flex-start;*/
+            /*主轴居中对齐*/
+            /*justify-content: center;*/
+            /*主轴均分 每个子元素的margin相等*/
+            /*justify-content: space-around;*/
+            /*主轴均分 每个子元素的margin相等 边缘两个紧挨着父边缘*/
+            /*justify-content: space-between;*/
+            /*主轴均分 */
+            /*justify-content: space-evenly;*/
+
+            /*  ------------------侧轴的对齐方式(单行)----------------  */
+            /*侧轴的起始位置*/
+            /*align-items: flex-start;*/
+            /*侧轴的结束位置*/
+            /*align-items: flex-end;*/
+            /*侧轴的中心位置*/
+            /*align-items: center;*/
+            /*侧轴的基线位置*/
+            /*align-items: baseline;*/
+            /*侧轴的拉伸*/
+            /*align-items: stretch;*/
+            /*  ------------------侧轴的对齐方式(多行)----------------  */
+            /*侧轴的起始位置*/
+            /*align-content: flex-start;*/
+            /*侧轴的结束位置*/
+            /*align-content: flex-end;*/
+            /*侧轴的中心位置*/
+            /*align-content: center;*/
+            /*侧轴的中心位置*/
+            /*align-content: center;*/
+            /*侧轴行均分 每行的margin相等 */
+            /*align-content: space-around;*/
+            /*侧轴行均分 每行的margin相等 边缘两个紧挨着父边缘*/
+            /*align-content: space-between;*/
+            /*侧轴行均分*/
+            /*align-content: space-evenly;*/
+            /*侧轴行均分 每行拉伸*/
+            /*align-content: stretch;*/
+
+
+
+        }
+
+        .inner{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            border: red solid 1px;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 100px;
+        }
+        .i8{
+            height: 150px;
+            /*-----------主轴方向上修改次元素的大小------------*/
+            /*flex-basis: 200px;*/
+            /*  权重 拉伸  */
+            flex-grow: 1;
+            /*  权重 收缩  */
+            flex-shrink: 1;
+
+            /*  复合属性  */
+            flex: 1 1 200px;
+            /*排序 */
+            order: 1;
+            /*自己的位置调整 */
+            /*align-self: center;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+
+        <div class="inner">4</div>
+        <div class="inner">5</div>
+        <div class="inner">6</div>
+
+        <div class="inner">7</div>
+        <div class="inner i8">8</div>
+        <div class="inner">9</div>
+    </div>
+</body>
+</html>
