@@ -8,3 +8,7 @@ netstat -nplt
 ```
 /usr/local/etc/nginx/nginx.conf
 ```
+> 查看文件内存
+```
+df -h
+```
