@@ -125,6 +125,13 @@ cat xxx.tar | docker import - xxx镜像用户/xxx镜像名:version
 ```
 docker commit -m "提交信息" -a="作者" 容器ID 要创建的目标镜像名:version
 ```
+虚悬镜像
+```
+查找虚悬镜像
+docker images ls -f dangling=true
+删除虚悬镜像
+docker image prune
+```
 
 数据卷共享
 ```
@@ -134,4 +141,14 @@ docker run -it --privileged=true -v /宿主机绝对路径:/容器内绝对路�
 :rw 容器可读可写
 :ro 容器只读
 ```
-
+docker 网络
+```
+docker network ls 
+```
+容器随docker启动
+```
+启动时添加
+docker run -d --restart=always tomcat
+启动后忘了添加可以补上
+docker container update --restart=always 容器名字
+```

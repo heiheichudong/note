@@ -1,0 +1,42 @@
+services:
+  order:
+    image: order:1.2
+    ports:
+      - "8088"
+    networks:
+      - front-tier
+      - back-tier
+    configs:
+      - httpd-config
+    secrets:
+      - server-certificate
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:6.0.2
+    volumes:
+      - db-data:/etc/data
+    networks:
+      - back-tier
+    command: redis-server /etc/redis/redis.conf
+
+
+volumes:
+  db-data:
+    driver: flocker
+    driver_opts:
+      size: "10GiB"
+
+configs:
+  httpd-config:
+    external: true
+
+secrets:
+  server-certificate:
+    external: true
+
+networks:
+  # The presence of these objects is sufficient to define them
+  front-tier: {}
+  back-tier: {}
