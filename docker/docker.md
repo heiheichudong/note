@@ -114,6 +114,11 @@ docker inspect 容器ID
 ```
 导出与导入
 ```
+从主机复制目录到容器
+docker cp /host/path/dir my_container:/path/in/container
+从容器复制目录到主机
+docker cp my_container:/path/to/dir /host/path
+
 导出容器中的文件
 docker cp 容器ID：路径 容器目标路径
 导出镜像
@@ -149,6 +154,5 @@ docker network ls
 ```
 启动时添加
 docker run -d --restart=always tomcat
-启动后忘了添加可以补上
 docker container update --restart=always 容器名字
 ```
